@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.2-experimental",
+  "extension_id": "org.vllm-hust.operator-optimizations",
+  "extension_version": "0.3.1",
+  "kind": "runtime_bridge",
+  "host": {
+    "provider": "vllm",
+    "name": "vllm",
+    "version_range": "==0.1.dev20240",
+    "api_range": ">=1,<2"
+  },
+  "runtime": {
+    "type": "python",
+    "process_scope": "worker",
+    "isolation": "trusted_in_process"
+  },
+  "lifecycle_owner": "vllm",
+  "protocols": [],
+  "implementation": [
+    {
+      "type": "python_module",
+      "module": "vllm_hust_operator_optimizations.bundle",
+      "object": "OperatorOptimizationBundle",
+      "status": "active"
+    }
+  ],
+  "requires_services": [],
+  "activation": {
+    "entry_points": [],
+    "environment": {
+      "VLLM_HUST_OPERATOR_OPTIMIZATIONS": "persistent-matmul-empty,linear-swiglu-graph"
+    },
+    "additional_config": {}
+  }
+}
