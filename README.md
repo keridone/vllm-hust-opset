@@ -3,6 +3,10 @@
 [![PyPI](https://img.shields.io/pypi/v/vllm-hust-opset)](https://pypi.org/project/vllm-hust-opset/)
 [![CI](https://github.com/keridone/vllm-hust-opset/actions/workflows/ci.yml/badge.svg)](https://github.com/keridone/vllm-hust-opset/actions/workflows/ci.yml)
 
+- PyPI plugin: https://pypi.org/project/vllm-hust-opset/
+- Source repository: https://github.com/keridone/vllm-hust-opset
+- Issues and feature requests: https://github.com/keridone/vllm-hust-opset/issues
+
 **OPset is a pluggable operator-optimization collection for the vLLM-HUST
 Ascend backend, delivering kernel replacements, vertical fusion,
 epilogue/prologue fusion, and the performance evidence for each change.**
